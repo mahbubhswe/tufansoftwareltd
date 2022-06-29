@@ -1,0 +1,41 @@
+{
+  "name": "tsltd",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.8.4",
+    "aos": "^2.3.4",
+    "axios": "^0.27.2",
+    "emailjs": "^4.0.0",
+    "emailjs-com": "^3.2.0",
+    "next": "12.1.6",
+    "next-connect": "^0.12.2",
+    "nodemailer": "^6.7.5",
+    "react": "^18.2.0",
+    "react-animated-text": "^0.1.4",
+    "react-dom": "18.2.0",
+    "react-messenger-customer-chat": "^0.8.0",
+    "react-profile-card": "^0.1.4",
+    "react-responsive-carousel": "^3.2.23",
+    "react-reveal": "^1.2.2",
+    "react-social-icons": "^5.13.0",
+    "react-spinners": "^0.12.0",
+    "react-text-transition": "^2.0.0",
+    "reveal": "^0.0.4",
+    "sendmail": "^1.6.1"
+  },
+  "devDependencies": {
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6"
+  }
+}
