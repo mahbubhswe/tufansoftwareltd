@@ -9,15 +9,21 @@ import {
   IconButton,
   List,
   ListItem,
-  ListItemButton,
-  ListItemText,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  Divider,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import NextLink from "next/link";
+import afterHeadPic from "../public/img/afterHeadPic.webp";
 import { useRouter } from "next/router";
-import Slider from "./Slider";
+import Image from "next/image";
+import Contact from "../components/Contact";
 export default function Navbar() {
   const [show, setShow] = useState(false);
+  const [showContact, setShowContact] = useState(false);
   const router = useRouter();
   const navItems = [
     {
@@ -27,30 +33,20 @@ export default function Navbar() {
     },
     {
       id: 2,
-      link: "/services",
+      link: "#our-services",
       title: "SERVICES",
     },
 
     {
       id: 3,
-      link: "/categories",
+      link: "#software-categories",
       title: "CATEGORIES",
     },
     {
       id: 4,
-      link: "/courses",
-      title: "COURSES",
-    },
-    {
-      id: 5,
-      link: "/about",
-      title: "ABOUT",
-    },
-    {
-      id: 6,
-      link: "/contact",
-      title: "CONTACT",
-    },
+      link: "#about-us",
+      title: "About US",
+    }
   ];
 
   return (
@@ -58,14 +54,14 @@ export default function Navbar() {
       <AppBar
         component="nav"
         position="sticky"
-        sx={{ boxShadow: "none", paddingX: "10px" }}
+        sx={{ boxShadow: "none", paddingX: "10px", paddingY: "12px" }}
       >
         <Toolbar color="primary">
           <Typography
             variant="bold"
             component={"span"}
             sx={{
-              flexGrow: 1,
+              flexGrow: { xs: 1, sm: 1, md: 0.5, lg: 0.5, xl: 0.5 },
               fontSize: "21px",
               textShadow: "1px 2px",
             }}
@@ -77,20 +73,37 @@ export default function Navbar() {
             direction="row"
             spacing={2}
             sx={{
+              flexGrow: 1,
               display: { xs: "none", sm: "block" },
             }}
           >
             {navItems.map((item) => (
-              <Button
-                key={item.title}
-                onClick={() => router.push(item.link)}
-                color="navBtnColor"
-                size="large"
-              >
-                {item.title}
-              </Button>
+              <NextLink href={item.link} key={item.id}>
+                <Button component="a" color="navBtnColor" size="large">
+                  {item.title}
+                </Button>
+              </NextLink>
             ))}
+              <NextLink href={"/portfolio"} passHref>
+                <Button component="a" target="_blank" color="navBtnColor" size="large">
+                Portfolio
+                </Button>
+              </NextLink>
           </Stack>
+          <Button
+            size="learge"
+            sx={{
+              display: { xs: "none", sm: "block" },
+              color: "#ffffff",
+              background: "#CB5455",
+              "&:hover": {
+                background: "#DB4040",
+              },
+            }}
+            onClick={() => setShowContact(true)}
+          >
+            Contact
+          </Button>
           <IconButton
             onClick={() => setShow(true)}
             sx={{
@@ -104,8 +117,6 @@ export default function Navbar() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <div style={{ backgroundColor: "green" }} id="myBar"></div>
-      {router.asPath === "/" ? <Slider></Slider> : null}
 
       <Drawer open={show} onClose={() => setShow(false)}>
         <Stack sx={{ padding: "20px", width: "100vw" }} spacing={1}>
@@ -128,14 +139,64 @@ export default function Navbar() {
                 color="navBarBtn"
                 sx={{ fontSize: "18px", fontWeight: "900" }}
               >
-                <ListItemButton onClick={() => router.push(item.link)}>
-                  <ListItemText> {item.title}</ListItemText>
-                </ListItemButton>
+                <NextLink href={item.link} key={item.id}>
+                  <Button component="a" color="navBtnColor" size="large">
+                    {item.title}
+                  </Button>
+                </NextLink>
               </ListItem>
             ))}
+            <ListItem>
+              <Button
+                size="learge"
+                sx={{
+                  color: "#ffffff",
+                  background: "#CB5455",
+                  "&:hover": {
+                    background: "#DB4040",
+                  },
+                }}
+                onClick={() => setShowContact(true)}
+              >
+                Contact
+              </Button>
+            </ListItem>
           </List>
+
+          <Image src={afterHeadPic} alt="afterHeadPic" quality={100} />
         </Stack>
       </Drawer>
+      <Dialog
+        scroll="body"
+        open={showContact}
+        maxWidth="sm"
+        onClose={() => setShowContact(!showContact)}
+      >
+        <DialogTitle align="center" fontSize={25}>
+          We will answer your mail within 24H
+          <Button
+            onClick={() => setShowContact(false)}
+            type="button"
+            sx={{
+              width: "3px",
+              marginLeft: "auto",
+              color: "black",
+              border: "1px dotted #ccc",
+              background: "red",
+              marginLeft: "5px",
+              "&:hover": {
+                background: "red",
+              },
+            }}
+          >
+            <CloseIcon></CloseIcon>
+          </Button>
+        </DialogTitle>
+        <Divider></Divider>
+        <DialogContent>
+          <Contact />
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
