@@ -46,7 +46,7 @@ export default function Navbar() {
       id: 4,
       link: "#about-us",
       title: "About US",
-    }
+    },
   ];
 
   return (
@@ -84,11 +84,16 @@ export default function Navbar() {
                 </Button>
               </NextLink>
             ))}
-              <NextLink href={"/portfolio"} passHref>
-                <Button component="a" target="_blank" color="navBtnColor" size="large">
+            <NextLink href={"/portfolio"} passHref>
+              <Button
+                component="a"
+                target="_blank"
+                color="navBtnColor"
+                size="large"
+              >
                 Portfolio
-                </Button>
-              </NextLink>
+              </Button>
+            </NextLink>
           </Stack>
           <Button
             size="learge"
@@ -146,6 +151,18 @@ export default function Navbar() {
                 </NextLink>
               </ListItem>
             ))}
+            <ListItem>
+              <NextLink href={"/portfolio"} passHref>
+                <Button
+                  component="a"
+                  target="_blank"
+                  color="navBtnColor"
+                  size="large"
+                >
+                  Portfolio
+                </Button>
+              </NextLink>
+            </ListItem>
             <ListItem>
               <Button
                 size="learge"

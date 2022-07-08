@@ -47,6 +47,7 @@ export default function OurServices() {
           paddingY: "60px",
           border: "3px dashed gray",
           borderRadius: "4px",
+          margin:"5px"
         }}
       >
         <Stack>
