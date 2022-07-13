@@ -1,10 +1,5 @@
-import {
-  Container,
-  Stack,
-  Typography,
-  Box
-} from "@mui/material";
-import { ParallaxHover } from 'react-parallax-hover';
+import { Container, Stack, Typography, Box } from "@mui/material";
+import { ParallaxHover } from "react-parallax-hover";
 import Image from "next/image";
 import React, { useState } from "react";
 import bayazid from "./../public/img/bayazid.png";
@@ -29,56 +24,56 @@ export default function OurTechnologyExpert() {
       img: tokon,
       name: "Monirul Islam Tokon",
       title: "Founder & CEO",
-      position:"left"
+      position: "left",
     },
     {
       id: 2,
       img: mahbub,
       name: "Mahbub Hasan",
       title: "Software Engineer",
-      position:"right"
+      position: "right",
     },
     {
       id: 3,
       img: likhon,
       name: "Mehedi Hasan Likhon",
       title: "Senior Software Engineer",
-      position:"center"
+      position: "center",
     },
     {
       id: 4,
       img: shamim,
       name: "Shahadat Hossain Shamim",
       title: "Senior Game Developer",
-      position:"left"
+      position: "left",
     },
     {
       id: 5,
       img: bayazid,
       name: "Muhammad Bayazid Hasan",
       title: "App Developer",
-      position:"right"
+      position: "right",
     },
     {
       id: 6,
       img: tanjim,
       name: "Tanjim Khan",
       title: "Graphic Designer",
-      position:"center"
+      position: "center",
     },
     {
       id: 7,
       img: bristi,
       name: "Bristi Rani Sharker",
       title: "Digital Marketer",
-      position:"left"
+      position: "left",
     },
     {
       id: 8,
       img: nahid,
       name: "Nurnobi Nahid",
       title: "Digital Marketer",
-      position:"right"
+      position: "right",
     },
   ];
   return (
@@ -120,7 +115,7 @@ export default function OurTechnologyExpert() {
         <Box
           sx={{
             height: "500px",
-            padding:"20px",
+            padding: "20px",
             width: {
               xs: "100%",
               sm: "100%",
@@ -130,28 +125,25 @@ export default function OurTechnologyExpert() {
             },
           }}
         >
-        
           {teamMembers.map((item) => {
             return (
-              <div key={item.id} style={{textAlign:item.position}} >
+              <div key={item.id} style={{ textAlign: item.position }}>
                 <Image
                   style={{
                     borderRadius: "50%",
-                    margin: "5px",
                   }}
-                
                   src={item.img}
                   alt="Profile"
                   height={50}
                   width={50}
                   quality={100}
                   onClick={() => setProfile(item)}
-                /></div>
-              );
-            })}
-          
+                />
+              </div>
+            );
+          })}
         </Box>
-     
+
         <Box
           className="profileCard"
           sx={{
@@ -181,6 +173,7 @@ export default function OurTechnologyExpert() {
             }}
           >
             <Image
+              className="bounceEffect"
               style={{ borderRadius: "50%" }}
               src={profile.img}
               alt="Profile"
@@ -197,8 +190,6 @@ export default function OurTechnologyExpert() {
             </Fade>
           </div>
         </Box>
-
-       
       </Stack>
     </Container>
   );

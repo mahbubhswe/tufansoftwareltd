@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { Fade } from "react-reveal";
 import responsive from "../public/img/responsive.gif";
 export default function ResponsiveDesign() {
   return (
@@ -15,23 +16,66 @@ export default function ResponsiveDesign() {
           mt: "100px",
         }}
       >
-        <Typography      sx={{
-            mb:"30px"
-          }} variant="bold" component="h1" textAlign="center">
-          Fully Responsive Design
-        </Typography>
-        <Typography
-         
+        <Box
           sx={{
-            width: "90%",
-            margin: "auto",
-            mb:"50px"
+            backgroundImage: `url("../img/effect2.jpg")`,
+            backgroundSize: "cover",
+            paddingTop: "20px",
           }}
         >
-          We are heighly focus on responsive design for best user experience in
-          desktop, tab and mobile devise. Optimizing your app for large screens
-          improves the overall experience for your users.
-        </Typography>
+          <Typography
+            sx={{
+              mb: "30px",
+            }}
+            variant="bold"
+            component="h1"
+            textAlign="center"
+          >
+            Fully Responsive Design
+          </Typography>
+          <Fade left>
+            <Typography
+              sx={{
+                width: "90%",
+                margin: "auto",
+                mb: "50px",
+              }}
+            >
+              We are heighly focus on responsive design for best user experience
+              in desktop, tab and mobile devise. Optimizing your app for large
+              screens improves the overall experience for your users. Responsive
+              design allows your website content to flow freely across all
+              screen resolutions and sizes, and renders it to look great on all
+              devices. It also makes it unnecessary to maintain different
+              versions of your website for mobile and desktop and saves you
+              time, resources and efforts.
+            </Typography>
+          </Fade>
+          <Typography
+            sx={{
+              width: "90%",
+              margin: "auto",
+              mb: "20px",
+            }}
+            variant="bold"
+            component="h4"
+          >
+            What Is Responsive Web Design?
+          </Typography>
+          <Fade bottom delay={400} duration={4000}>
+            <Typography
+              sx={{
+                width: "90%",
+                margin: "auto",
+                mb: "50px",
+              }}
+            >
+              Responsive Web design is the approach that suggests that design
+              and development should respond to the user’s behavior and
+              environment based on screen size, platform and orientation.
+            </Typography>
+          </Fade>
+        </Box>
         <Image
           src={responsive}
           alt="responsive"

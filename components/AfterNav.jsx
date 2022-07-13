@@ -13,6 +13,7 @@ export default function AfterNav() {
         lg: "row",
         xl: "row",
       }}
+      
     >
       <Box
         sx={{

@@ -23,6 +23,7 @@ import {
   Grid,
   Stack,
   Typography,
+  Box
 } from "@mui/material";
 import { Wave } from "react-animated-text";
 export default function IndrustryWeServe() {
@@ -114,7 +115,11 @@ export default function IndrustryWeServe() {
     },
   ];
   return (
-    <>
+    <Box    sx={{
+      backgroundImage: `url("../img/indrustyrWeServeBG.svg")`,
+      backgroundSize: "cover",
+      paddingTop: "20px",
+    }}>
       <div style={{ marginTop: "30px", textAlign: "right" }}>
         <Image src={technologySideBg} alt="technologySideBg" quality={100} />
       </div>
@@ -122,7 +127,6 @@ export default function IndrustryWeServe() {
         <Stack mt={20}>
           <Typography variant="bold" component="h1" textAlign="center" mb={5}>
             <Wave text="Indrustry We Serve" effect="stretch" effectChange={2} />
-            
           </Typography>
           <Grid container spacing={2} justifyContent={"center"}>
             {servicesItem.map((x) => {
@@ -162,6 +166,6 @@ export default function IndrustryWeServe() {
           </Grid>
         </Stack>
       </Container>
-    </>
+    </Box>
   );
 }
