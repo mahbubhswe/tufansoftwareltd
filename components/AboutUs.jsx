@@ -64,13 +64,7 @@ export default function AboutUs() {
         </Box>
         <Box
           sx={{
-            height: {
-              xs: "450px",
-              sm: "45px",
-              md: "500px",
-              lg: "500px",
-              xl: "500px",
-            },
+            height:"500px",
             width: { xs: "100%", sm: "100%", md: "55%", lg: "55%", xl: "55%" },
             display: "grid",
             placeContent: "center",
