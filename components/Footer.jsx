@@ -2,6 +2,7 @@ import {
   Divider,
   List,
   ListItem,
+  ListItemIcon,
   ListItemText,
   Stack,
   Typography,
@@ -9,6 +10,7 @@ import {
 import { Box } from "@mui/system";
 import React from "react";
 import SocialMediaLink from "../components/SocialMediaLink";
+import RoomIcon from '@mui/icons-material/Room';
 export default function Footer() {
   return (
     <div style={{ background: "#E3E6E8", marginTop: "100px" }}>
@@ -34,12 +36,16 @@ export default function Footer() {
             Tufan Software Ltd
           </Typography>
           <List>
-            <ListItem>
-              <ListItemText>Home Office</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Work Virtually</ListItemText>
-            </ListItem>
+          <ListItem>
+                <ListItemIcon>
+                  <RoomIcon sx={{ color: "#21335C" }} />
+                </ListItemIcon>
+                <ListItemText
+                  primary="Office"
+                  secondary="51,West Raja Bazar, Dhaka  Bangladesh
+                  "
+                />
+              </ListItem>
           </List>
         </Box>
       </Stack>

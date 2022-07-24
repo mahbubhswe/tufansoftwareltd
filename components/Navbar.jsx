@@ -13,6 +13,7 @@ import {
   DialogTitle,
   DialogContent,
   Divider,
+  filledInputClasses,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
@@ -143,6 +144,7 @@ export default function Navbar() {
                 key={item.id}
                 color="navBarBtn"
                 sx={{ fontSize: "18px", fontWeight: "900" }}
+                onClick={()=>setShow(false)}
               >
                 <NextLink href={item.link} key={item.id}>
                   <Button component="a" color="navBtnColor" size="large">

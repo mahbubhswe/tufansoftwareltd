@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 import CustomerSupport from "./CustomerSupport";
 import UserFriendly from "./UserFriendly";
@@ -45,19 +45,25 @@ export default function WhyChoceUs() {
               textAlign="center"
               mt="35px"
             >
-              Why Choice Us
+              Why Choose Us
             </Typography>
-            <Typography textAlign="center" mt={3} p={10}>
-              We provide budget friendly services for your business.Also provide
-              services with creative ideas what make your business more
-              successful and effective. Select your business area and order now
-              We provide budget friendly services for your business.Also provide
-              services with creative ideas what make your business more
-              successful and effective. Select your business area and order now
-              We provide budget friendly services for your business.Also provide
-              services with creative ideas what make your business more
-              successful and effective. Select your business area and order now
+            <Typography
+              textAlign="center"
+              sx={{ color: "#222222",fontFamily:"sans-serif" }}
+              mt={3}
+              p={10}
+            >
+              We have highly skilled engineers with excellent technical
+              knowledge and experience in using latest software standards,
+              tools, platforms, frameworks and technologies and we invest
+              continuously in training and education, to be able to respond to
+              any new technology challenges and demands from our clients.
+              <br />
+              <br /> We provide budget friendly services for your business.Also
+              provide services with creative ideas what make your business more
+              successful and effective.
             </Typography>
+
             <Stack
               direction={{
                 xs: "column",

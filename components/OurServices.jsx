@@ -51,7 +51,7 @@ export default function OurServices() {
         }}
       >
         <Stack>
-          <Typography variant="bold" component="h1" textAlign="center" mb={8}>
+          <Typography  variant="bold" component="h1" textAlign="center" mb={8}>
             <Wave text="Service We Provide" effect="stretch" effectChange={2} />
           </Typography>
           <Grid container spacing={2} justifyContent={"center"}>

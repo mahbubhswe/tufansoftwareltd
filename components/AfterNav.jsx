@@ -56,7 +56,7 @@ export default function AfterNav() {
             fontFamily="georgia"
             sx={{ color: "#001E3C" }}
           >
-            We are waiting to help you to integrete your business with
+            We are here to help you to integrete your business with
             technology
           </Typography>
         </Fade>

@@ -15,13 +15,14 @@ import { Wave } from "react-animated-text";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 export default function AboutUs() {
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div className="bgGd" style={{ marginTop: "100px" }}>
       <Typography
         variant="bold"
         component="h1"
         fontWeight={900}
         textAlign="center"
         mb={8}
+        pt={10}
       >
         <Wave text="About Us" effect="stretch" effectChange={2} />
       </Typography>
@@ -78,7 +79,7 @@ export default function AboutUs() {
                 </ListItemIcon>
                 <ListItemText
                   primary="Best Technology Experter"
-                  secondary="We are waiting to help you to integrete your business with technologWe are waiting to help you to integrete your business with technologWe are waiting to help you to integrete your business with technology"
+                  secondary="Our developers, designers, testers and project managers know their craft inside out. What is more, we all speak English, so you can discuss details with every person working on the project."
                 />
               </ListItem>
             </Fade>
@@ -89,8 +90,7 @@ export default function AboutUs() {
                 </ListItemIcon>
                 <ListItemText
                   primary="Well Mantained"
-                  secondary="We are waiting to help you to integrete your business with technologWe are waiting to help you to integrete your business with technologWe are waiting to help you to integrete your business with technologyWe are waiting to help you to integrete your business with
-              technology"
+                  secondary="We provide best mantained support for your application and improves. We provide life time support for your business success"
                 />
               </ListItem>
             </Fade>
@@ -100,8 +100,8 @@ export default function AboutUs() {
                   <CheckCircleIcon sx={{ color: "#21335C" }} />
                 </ListItemIcon>
                 <ListItemText
-                  primary="Best Quality"
-                  secondary="We are waiting to help you to integrete your business with technologWe are waiting to help you to integrete your business with technologWe are waiting to help you to integrete your business with technology"
+                  primary="Excellent price-quality ratio"
+                  secondary="Despite the excellent quality, the costs are lower than the Bangladesh average. And, on top of that, we provide you with detailed lists of expenses, so you know what exactly you are paying for."
                 />
               </ListItem>
             </Fade>
@@ -112,8 +112,8 @@ export default function AboutUs() {
                 </ListItemIcon>
                 <ListItemText
                   primary="Fully Commited"
-                  secondary="We are waiting to help you to integrete your business with technologWe are waiting to help you to integrete your business with technologWe are waiting to help you to integrete your business with
-              technology"
+                  secondary="Most of our business comes from referals. We will work hard to get yet another satisfied customer and we hope that you will stay with us for years – like many of our clients do.
+                  "
                 />
               </ListItem>
             </Fade>

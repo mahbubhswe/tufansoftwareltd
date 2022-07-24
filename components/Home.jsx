@@ -25,6 +25,7 @@ export default function Home() {
       <AboutUs />
       </section>
       <WhyChoceUs />
+
       <MessengerCustomerChat
         pageId="101494675943667"
         appId="2102876166584313"

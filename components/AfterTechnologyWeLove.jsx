@@ -8,6 +8,7 @@ export default function AfterTechnologyWeLove() {
       sx={{
         backgroundImage: `url("../img/laptopBg.gif")`,
         backgroundSize: "cover",
+        marginTop: "100px",
       }}
     >
       <div

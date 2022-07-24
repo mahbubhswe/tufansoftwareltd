@@ -8,9 +8,9 @@ export default function SocialMediaLink() {
         Follow us
       </Typography>
       <Stack direction="row" spacing={2} mt={2}>
-        <SocialIcon url="https://twitter.com/" />
+        <SocialIcon url="https://mobile.twitter.com/TufanSoft" />
         <SocialIcon url="https://www.facebook.com/tufansoftwareltd" />
-        <SocialIcon url="https://youtube.com/" />
+        <SocialIcon url="https://www.youtube.com/channel/UCGlE-rxSo_8v2cclbcn3Zmw" />
       </Stack>
     </Box>
   );

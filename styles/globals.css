@@ -41,3 +41,9 @@
   to { transform: translate3d(0, 200px, 0);}
 }
 
+.bgGd{
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 20%;
+  
+  background-image: linear-gradient(to right, #FAD5E2 , #F8F8FF);
+}
