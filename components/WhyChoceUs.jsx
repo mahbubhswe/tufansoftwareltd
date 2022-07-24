@@ -12,14 +12,13 @@ export default function WhyChoceUs() {
         <Image src={servicesSideBg} alt="technologySideBg" quality={100} />
       </div>
 
-      <Container sx={{ marginTop: "100px" }}>
-        <Box
+     
+      <Box
+        className="WbgGd"
           sx={{
-            background: "#CB5456",
             display: "grid",
             borderRadius: "7px",
             placeContent: "center",
-            border: "1px solid #ccc",
             //   boxShadow: "0 1px 4px 0 rgb(0 0 0 / 50%)",
           }}
           data-aos="zoom-in"
@@ -33,7 +32,6 @@ export default function WhyChoceUs() {
         >
           <div
             style={{
-              background: "#FFB30B",
               padding: "10px",
               borderRadius: "7px",
               borderTopLeftRadius: "50%",
@@ -78,7 +76,7 @@ export default function WhyChoceUs() {
             </Stack>
           </div>
         </Box>
-      </Container>
+    
     </>
   );
 }

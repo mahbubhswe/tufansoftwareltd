@@ -44,6 +44,12 @@
 .bgGd{
   border-top-right-radius: 5%;
   border-bottom-left-radius: 20%;
-  
-  background-image: linear-gradient(to right, #FAD5E2 , #F8F8FF);
+  border-top-left-radius: 1%;
+  border-bottom-right-radius: 1%;
+  background-image: linear-gradient(to bottom right, #FAD5E2 , #F8F8FF);
+}
+.WbgGd{
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 5%;
+  background-image: linear-gradient(  #F8F8FF,#FAD5E2 );
 }
