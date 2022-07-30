@@ -37,14 +37,14 @@ export default function OurTechnologyExpert() {
       id: 3,
       img: likhon,
       name: "Mehedi Hasan Likhon",
-      title: "Senior Software Engineer",
+      title: "Adviser",
       position: "center",
     },
     {
       id: 4,
       img: shamim,
       name: "Shahadat Hossain Shamim",
-      title: "Senior Game Developer",
+      title: "Adviser",
       position: "left",
     },
     {
