@@ -4,11 +4,12 @@ import Image from "next/image";
 import React, { useState } from "react";
 import bayazid from "./../public/img/bayazid.png";
 import bristi from "./../public/img/bristi.png";
-import likhon from "./../public/img/likhon.png";
+import ibrahim from "./../public/img/ibrahim.png";
+import tuslima from "./../public/img/tuslima.png";
 import mahbub from "./../public/img/mahbub.png";
 import nahid from "./../public/img/nahid.png";
 import shamim from "./../public/img//shamim.png";
-import tanjim from "./../public/img/tanjim.png";
+import likhon from "./../public/img/likhon.png";
 import tokon from "./../public/img/tokon.png";
 import { Fade } from "react-reveal";
 export default function OurTechnologyExpert() {
@@ -42,9 +43,9 @@ export default function OurTechnologyExpert() {
     },
     {
       id: 4,
-      img: shamim,
-      name: "Shahadat Hossain Shamim",
-      title: "Adviser",
+      img: tuslima,
+      name: "Kazi Tuslima Akter",
+      title: "Grafic & UIUX Designer",
       position: "left",
     },
     {
@@ -54,11 +55,12 @@ export default function OurTechnologyExpert() {
       title: "App Developer",
       position: "right",
     },
+
     {
       id: 6,
-      img: tanjim,
-      name: "Tanjim Khan",
-      title: "Graphic Designer",
+      img: shamim,
+      name: "Shahadat Hossain Shamim",
+      title: "Adviser",
       position: "center",
     },
     {
@@ -74,6 +76,13 @@ export default function OurTechnologyExpert() {
       name: "Nurnobi Nahid",
       title: "Digital Marketer",
       position: "right",
+    },
+    {
+      id: 9,
+      img: ibrahim,
+      name: "Ibrahim Karim Jony",
+      title: "Business Development & marketing Expert",
+      position: "center",
     },
   ];
   return (
