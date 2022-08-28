@@ -29,15 +29,10 @@ export default function WhyChoceUs() {
           //   boxShadow: "0 1px 4px 0 rgb(0 0 0 / 50%)",
         }}
       >
-        <div
-          style={{
-            padding: "0px 100px",
-          }}
-        >
-          <Typography variant="bold" component="h1" textAlign="center">
-            Why Choose Us
-          </Typography>
-
+        <Typography variant="bold" component="h1" textAlign="center">
+          Why Choose Us
+        </Typography>
+        <Box sx={{ paddingX: { xs: "2px", sm: "50px", md: "100px" } }}>
           <ListItem>
             <ListItemIcon>
               <CheckCircleIcon sx={{ color: "#21335C" }} />
@@ -51,7 +46,7 @@ export default function WhyChoceUs() {
                   any new technology challenges and demands from our clients."
             />
           </ListItem>
-        </div>
+        </Box>
         <br></br>
         <br></br>
         <br></br>

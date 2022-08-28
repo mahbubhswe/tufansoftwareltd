@@ -31,31 +31,31 @@ export default function IndrustryWeServe() {
     {
       id: 1,
       img: ce,
-      text: "E-Commerce System",
+      text: "E-Commerce",
       url: "/services/technology/web",
     },
     {
       id: 2,
       img: cel,
-      text: "E-Learning System",
+      text: "E-Learning",
       url: "/services/technology/mobile",
     },
     {
       id: 3,
       img: ccs,
-      text: "Courier Services System",
+      text: "Courier Services",
       url: "/services/technology/game",
     },
     {
       id: 4,
       img: cnp,
-      text: "Online News Paper",
+      text: "Online News",
       url: "/services/technology/artificial-intelligence",
     },
     {
       id: 5,
       img: cta,
-      text: "Travel Agency System",
+      text: "Travel Agency",
       url: "/services/technology/cyber-security",
     },
     {
@@ -67,7 +67,7 @@ export default function IndrustryWeServe() {
     {
       id: 7,
       img: csm,
-      text: "School Management",
+      text: "School ERP",
       url: "/services/technology/blockchain",
     },
     {
@@ -79,7 +79,7 @@ export default function IndrustryWeServe() {
     {
       id: 9,
       img: chms,
-      text: "Hospital Managment ",
+      text: "Hospital ERP ",
       url: "/services/technology/blockchain",
     },
     {
@@ -128,14 +128,14 @@ export default function IndrustryWeServe() {
           <Typography variant="bold" component="h1" textAlign="center" mb={5}>
             <Wave text="Indrustry We Serve" effect="stretch" effectChange={2} />
           </Typography>
-          <Grid container spacing={2} justifyContent={"center"}>
+          <Grid container spacing={1} justifyContent={"center"}>
             {servicesItem.map((x) => {
               return (
                 <Grid
                   key={x.id}
                   item
                   sx={{
-                    width: "230px",
+                    width: "180px",
                   }}
                   data-aos="fade-up-right"
                   data-aos-offset="-50"
@@ -151,8 +151,8 @@ export default function IndrustryWeServe() {
                       <Image
                         alt="services"
                         src={x.img}
-                        width={230}
-                        height={200}
+                        width={180}
+                        height={150}
                         quality={100}
                       />
                     </CardMedia>

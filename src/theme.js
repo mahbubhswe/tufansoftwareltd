@@ -19,6 +19,9 @@ const theme = createTheme({
     navBtnColor: {
       main: "#FFFFFF",
     },
+    navBtnColorMobile: {
+      main: "#0A1929",
+    },
     textColor: {
       main: "#FFFFFF",
     },

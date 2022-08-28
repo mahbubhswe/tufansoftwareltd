@@ -146,7 +146,7 @@ export default function Navbar() {
                 onClick={()=>setShow(false)}
               >
                 <NextLink href={item.link} key={item.id}>
-                  <Button component="a" color="navBtnColor" size="large">
+                  <Button component="a" color="navBtnColorMobile" size="large">
                     {item.title}
                   </Button>
                 </NextLink>

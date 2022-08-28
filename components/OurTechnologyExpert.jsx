@@ -32,7 +32,7 @@ function OurTechnologyExpert() {
       id: 4,
       img: tuslima,
       name: "Kazi Tuslima Akter",
-      title: "Grafic & UIUX Designer",
+      title: "UI/UX Designer",
       position: "left",
     },
     {
@@ -61,7 +61,7 @@ function OurTechnologyExpert() {
       id: 9,
       img: ibrahim,
       name: "Ibrahim Karim",
-      title: "Business Development",
+      title: "Business Analyst",
       position: "center",
     },
   ];
@@ -127,7 +127,7 @@ function OurTechnologyExpert() {
               key={x.id}
               item
               sx={{
-                width: "220px",
+                width: "180px",
               }}
               data-aos="fade-up-right"
               data-aos-offset="-50"
@@ -143,8 +143,8 @@ function OurTechnologyExpert() {
                   <Image
                     alt="services"
                     src={x.img}
-                    width={220}
-                    height={170}
+                    width={180}
+                    height={100}
                     quality={100}
                   />
                 </CardMedia>
