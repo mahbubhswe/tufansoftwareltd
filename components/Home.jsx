@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <>
       <TechnologyWeLove />
-      <AfterTechnologyWeLove />
       <section id="our-services">
       <OurServices />
       </section>

@@ -12,8 +12,7 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  Divider,
-  filledInputClasses,
+  Divider
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
@@ -25,7 +24,7 @@ import Contact from "../components/Contact";
 export default function Navbar() {
   const [show, setShow] = useState(false);
   const [showContact, setShowContact] = useState(false);
-  const router = useRouter();
+
   const navItems = [
     {
       id: 1,
@@ -55,7 +54,7 @@ export default function Navbar() {
       <AppBar
         component="nav"
         position="sticky"
-        sx={{ boxShadow: "none", paddingX: "10px", paddingY: "12px" }}
+        sx={{ boxShadow: "none", paddingX: "10px", paddingY: "5px", background: "#23CADA" }}
       >
         <Toolbar color="primary">
           <Typography
@@ -68,7 +67,7 @@ export default function Navbar() {
             }}
             color="black"
           >
-            <span style={{ color: "#FDAF0F" }}>TUFAN</span>SOFTWARELTD
+            <span style={{ color: "#E80907" }}>TUFAN</span>SOFTWARELTD
           </Typography>
           <Stack
             direction="row"

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Fade, Slide } from "react-reveal";
-import technologySideBg from "../public/img/technologySideBg.png";
+import servicesSideBg from "../public/img/ourServicesBg.png";
 import technologyItems from "../utils/technologyItems.js";
 export default function TechnologyWeLove() {
   const responsive = {
@@ -27,7 +27,7 @@ export default function TechnologyWeLove() {
   return (
     <Box>
       <div style={{ marginTop: "30px", textAlign: "right" }}>
-        <Image src={technologySideBg} alt="technologySideBg" quality={100} />
+        <Image src={servicesSideBg} alt="technologySideBg" quality={100} />
       </div>
 
       <Container sx={{ paddingY: "30px", marginTop: "50px" }}>
@@ -132,14 +132,11 @@ export default function TechnologyWeLove() {
             </Typography>
             <Slide left>
               <Typography>
-                <strong>•Front-end:</strong> Flutter
+                <strong>•Front-end:</strong> Flutter, React Native
               </Typography>
               <Typography>
                 <strong>•Back-end:</strong> Node.js, Express.js, REST API,
                 Firebase, Mongodb
-              </Typography>
-              <Typography>
-                <strong>•Version Control:</strong> Git, Github
               </Typography>
             </Slide>
           </Box>

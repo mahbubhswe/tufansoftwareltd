@@ -13,13 +13,9 @@
   text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.43);
   transform: translate(-50%, -50%);
 }
-.glassEffect{
-  background-color: #fee2f8;
-  background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
-}
+
 .profileCardWraper {
-  background-color: #fee2f8;
-  background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+  background-color: #F9F9FB;
 }
 .profileCard {
   background: rgba(255, 255, 255, 0.13);
@@ -30,26 +26,30 @@
   /* border: 1px solid rgb(158, 138, 138); */
 }
 
-.bounceEffect{
+.bounceEffect {
   animation: bounce 2s;
   animation-direction: alternate;
-  animation-timing-function: cubic-bezier(1, 0.05, 1, .5);
+  animation-timing-function: cubic-bezier(1, 0.05, 1, 0.5);
   animation-iteration-count: infinite;
 }
-@keyframes bounce{
-  from { transform: translate3d(0, 0, 0);}
-  to { transform: translate3d(0, 200px, 0);}
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 200px, 0);
+  }
 }
 
-.bgGd{
+.bgGd {
   border-top-right-radius: 5%;
   border-bottom-left-radius: 20%;
   border-top-left-radius: 1%;
   border-bottom-right-radius: 1%;
-  background-image: linear-gradient(to bottom right, #FAD5E2 , #F8F8FF);
+  background:#D9DCE1
 }
-.WbgGd{
+.WbgGd {
   border-top-right-radius: 20%;
   border-bottom-left-radius: 5%;
-  background-image: linear-gradient(  #F8F8FF,#FAD5E2 );
+  background-image: linear-gradient(#f8f8ff, #fad5e2);
 }

@@ -1,5 +1,4 @@
-import { Container, Stack, Typography, Box } from "@mui/material";
-import { ParallaxHover } from "react-parallax-hover";
+import { CardMedia,CardContent,Grid, Card, Typography, Box } from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
 import bayazid from "./../public/img/bayazid.png";
@@ -8,17 +7,10 @@ import ibrahim from "./../public/img/ibrahim.png";
 import tuslima from "./../public/img/tuslima.png";
 import mahbub from "./../public/img/mahbub.png";
 import nahid from "./../public/img/nahid.png";
-import shamim from "./../public/img//shamim.png";
-import likhon from "./../public/img/likhon.png";
 import tokon from "./../public/img/tokon.png";
-import { Fade } from "react-reveal";
+import Adviser from "./Adviser";
 export default function OurTechnologyExpert() {
-  const [profile, setProfile] = useState({
-    id: 1,
-    img: tokon,
-    name: "Monirul Islam Tokon",
-    title: "Founder & CEO",
-  });
+  
   const teamMembers = [
     {
       id: 1,
@@ -34,13 +26,7 @@ export default function OurTechnologyExpert() {
       title: "Software Engineer",
       position: "right",
     },
-    {
-      id: 3,
-      img: likhon,
-      name: "Mehedi Hasan Likhon",
-      title: "Adviser",
-      position: "center",
-    },
+
     {
       id: 4,
       img: tuslima,
@@ -51,18 +37,11 @@ export default function OurTechnologyExpert() {
     {
       id: 5,
       img: bayazid,
-      name: "Muhammad Bayazid Hasan",
+      name: "Bayazid Hasan",
       title: "App Developer",
       position: "right",
     },
 
-    {
-      id: 6,
-      img: shamim,
-      name: "Shahadat Hossain Shamim",
-      title: "Adviser",
-      position: "center",
-    },
     {
       id: 7,
       img: bristi,
@@ -80,27 +59,20 @@ export default function OurTechnologyExpert() {
     {
       id: 9,
       img: ibrahim,
-      name: "Ibrahim Karim Jony",
-      title: "Business Development & marketing Expert",
+      name: "Ibrahim Karim",
+      title: "Business Development",
       position: "center",
     },
   ];
   return (
-    <Container
+    <Box
       sx={{
         paddingY: "50px",
         mt: "100px",
         borderRadius: "4px",
       }}
       className="profileCardWraper"
-      data-aos="zoom-in"
-      data-aos-offset="-50"
-      data-aos-delay="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-      data-aos-anchor-placement="top-center"
+   
     >
       <Typography
         align="center"
@@ -109,97 +81,56 @@ export default function OurTechnologyExpert() {
         component="h1"
         fontWeight={900}
       >
+        Our Adviser
+      </Typography>
+      <Adviser></Adviser>
+      <Typography
+        align="center"
+        pb={5}
+        mt={20}
+        variant="bold"
+        component="h1"
+        fontWeight={900}
+      >
         Our Team Members
       </Typography>
-      <Stack
-        direction={{
-          xs: "column",
-          sm: "column",
-          md: "row",
-          lg: "row",
-          xl: "row",
-        }}
-        spacing={2}
-      >
-        <Box
-          sx={{
-            height: "500px",
-            padding: "20px",
-            width: {
-              xs: "100%",
-              sm: "100%",
-              md: "50%",
-              lg: "50%",
-              xl: "50%",
-            },
-          }}
-        >
-          {teamMembers.map((item) => {
-            return (
-              <div key={item.id} style={{ textAlign: item.position }}>
-                <Image
-                  style={{
-                    borderRadius: "50%",
+      <Grid container spacing={5} justifyContent={"center"}>
+            {teamMembers.map((x) => {
+              return (
+                <Grid
+                  key={x.id}
+                  item
+                  sx={{
+                    width: "250px",
                   }}
-                  src={item.img}
-                  alt="Profile"
-                  height={50}
-                  width={50}
-                  quality={100}
-                  onClick={() => setProfile(item)}
-                />
-              </div>
-            );
-          })}
-        </Box>
-
-        <Box
-          className="profileCard"
-          sx={{
-            height: "500px",
-            width: {
-              xs: "100%",
-              sm: "100%",
-              md: "50%",
-              lg: "50%",
-              xl: "50%",
-            },
-          }}
-          data-aos="fade-up"
-          data-aos-offset="-50"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center"
-        >
-          <div
-            style={{
-              height: "100%",
-              display: "grid",
-              placeContent: "center",
-            }}
-          >
-            <Image
-              className="bounceEffect"
-              style={{ borderRadius: "50%" }}
-              src={profile.img}
-              alt="Profile"
-              height={150}
-              width={150}
-              quality={100}
-            />
-            <br />
-            <Fade left>
-              <span>{profile.name}</span>
-            </Fade>
-            <Fade left>
-              <span>{profile.title}</span>
-            </Fade>
-          </div>
-        </Box>
-      </Stack>
-    </Container>
+                  data-aos="fade-up-right"
+                  data-aos-offset="-50"
+                  data-aos-delay="50"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-in-out"
+                  data-aos-mirror="true"
+                  data-aos-once="false"
+                  data-aos-anchor-placement="top-center"
+                >
+                  <Card >
+                    <CardMedia sx={{ padding: "10px" }}>
+                      <Image
+                        alt="services"
+                        src={x.img}
+                        width={250}
+                        height={200}
+                        quality={100}
+                      />
+                    </CardMedia>
+                    <CardContent>
+                      <Typography align="center">{x.name}</Typography>
+                      <Typography align="center">{x.title}</Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              );
+            })}
+          </Grid>
+    </Box>
   );
 }

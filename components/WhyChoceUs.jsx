@@ -14,21 +14,14 @@ export default function WhyChoceUs() {
 
      
       <Box
-        className="WbgGd"
+     
           sx={{
             display: "grid",
             borderRadius: "7px",
             placeContent: "center",
             //   boxShadow: "0 1px 4px 0 rgb(0 0 0 / 50%)",
           }}
-          data-aos="zoom-in"
-          data-aos-offset="-50"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center"
+      
         >
           <div
             style={{

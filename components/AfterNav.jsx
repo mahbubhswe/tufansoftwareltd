@@ -49,7 +49,7 @@ export default function AfterNav() {
             <span style={{ color: "#EFB701" }}>with technology</span>
           </Typography>
         </Fade>
-        <Fade bottom delay={500} duration={5000}>
+        <Fade bottom delay={300} duration={4000}>
           <Typography
             variant="bold"
             fontSize={25}

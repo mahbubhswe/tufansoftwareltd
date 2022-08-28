@@ -51,7 +51,7 @@ export default function ResponsiveDesign() {
               time, resources and efforts.
             </Typography>
           </Fade>
-          <Typography
+          {/* <Typography
             sx={{
               width: "90%",
               margin: "auto",
@@ -74,7 +74,7 @@ export default function ResponsiveDesign() {
               and development should respond to the user’s behavior and
               environment based on screen size, platform and orientation.
             </Typography>
-          </Fade>
+          </Fade> */}
         </Box>
         <Image
           src={responsive}

@@ -17,7 +17,7 @@ const theme = createTheme({
       main: red.A400,
     },
     navBtnColor: {
-      main: "#000C51",
+      main: "#FFFFFF",
     },
     textColor: {
       main: "#FFFFFF",
