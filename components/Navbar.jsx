@@ -63,11 +63,11 @@ export default function Navbar() {
             sx={{
               flexGrow: { xs: 1, sm: 1, md: 0.5, lg: 0.5, xl: 0.5 },
               fontSize: "21px",
-              textShadow: "1px 2px",
+              fontWeight:"bold"
             }}
             color="black"
           >
-            <span style={{ color: "#E80907" }}>TUFAN</span>SOFTWARELTD
+            <span style={{ color: "#FFFFFF"}}>TuFan</span>Software
           </Typography>
           <Stack
             direction="row"

@@ -1,6 +1,15 @@
-import { CardMedia,CardContent,Grid, Card, Typography, Box } from "@mui/material";
+import {
+  CardMedia,
+  CardContent,
+  Grid,
+  Card,
+  Typography,
+  Box,
+  Divider,
+} from "@mui/material";
 import Image from "next/image";
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import bayazid from "./../public/img/bayazid.png";
 import bristi from "./../public/img/bristi.png";
 import ibrahim from "./../public/img/ibrahim.png";
@@ -9,16 +18,8 @@ import mahbub from "./../public/img/mahbub.png";
 import nahid from "./../public/img/nahid.png";
 import tokon from "./../public/img/tokon.png";
 import Adviser from "./Adviser";
-export default function OurTechnologyExpert() {
-  
+function OurTechnologyExpert() {
   const teamMembers = [
-    {
-      id: 1,
-      img: tokon,
-      name: "Monirul Islam Tokon",
-      title: "Founder & CEO",
-      position: "left",
-    },
     {
       id: 2,
       img: mahbub,
@@ -72,7 +73,6 @@ export default function OurTechnologyExpert() {
         borderRadius: "4px",
       }}
       className="profileCardWraper"
-   
     >
       <Typography
         align="center"
@@ -83,7 +83,33 @@ export default function OurTechnologyExpert() {
       >
         Our Adviser
       </Typography>
+
       <Adviser></Adviser>
+
+      <Divider
+        sx={{ width: "80%", margin: "auto", marginY: "100px" }}
+      ></Divider>
+      <div style={{ textAlign: "center" }}>
+        <Image
+          alt="tokon"
+          style={{ borderRadius: "50%" }}
+          src={tokon}
+          width={250}
+          height={200}
+          quality={100}
+        />
+      </div>
+
+      <Typography align="center" variant="bold" component="h1" fontWeight={900}>
+        Monirul Islam Tokon
+      </Typography>
+      <Typography
+        align="center"
+        variant="bold"
+        component="h3"
+        sx={{ color: "gray" }}
+        fontWeight={900}
+      >{`Founder & CEO`}</Typography>
       <Typography
         align="center"
         pb={5}
@@ -94,43 +120,46 @@ export default function OurTechnologyExpert() {
       >
         Our Team Members
       </Typography>
-      <Grid container spacing={5} justifyContent={"center"}>
-            {teamMembers.map((x) => {
-              return (
-                <Grid
-                  key={x.id}
-                  item
-                  sx={{
-                    width: "250px",
-                  }}
-                  data-aos="fade-up-right"
-                  data-aos-offset="-50"
-                  data-aos-delay="50"
-                  data-aos-duration="1000"
-                  data-aos-easing="ease-in-out"
-                  data-aos-mirror="true"
-                  data-aos-once="false"
-                  data-aos-anchor-placement="top-center"
-                >
-                  <Card >
-                    <CardMedia sx={{ padding: "10px" }}>
-                      <Image
-                        alt="services"
-                        src={x.img}
-                        width={250}
-                        height={200}
-                        quality={100}
-                      />
-                    </CardMedia>
-                    <CardContent>
-                      <Typography align="center">{x.name}</Typography>
-                      <Typography align="center">{x.title}</Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              );
-            })}
-          </Grid>
+      <Grid container spacing={1} justifyContent={"center"}>
+        {teamMembers.map((x) => {
+          return (
+            <Grid
+              key={x.id}
+              item
+              sx={{
+                width: "220px",
+              }}
+              data-aos="fade-up-right"
+              data-aos-offset="-50"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              data-aos-anchor-placement="top-center"
+            >
+              <Card>
+                <CardMedia sx={{ padding: "10px" }}>
+                  <Image
+                    alt="services"
+                    src={x.img}
+                    width={220}
+                    height={170}
+                    quality={100}
+                  />
+                </CardMedia>
+                <CardContent>
+                  <Typography align="center">{x.name}</Typography>
+                  <Typography align="center">{x.title}</Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          );
+        })}
+      </Grid>
     </Box>
   );
 }
+export default dynamic(() => Promise.resolve(OurTechnologyExpert), {
+  ssr: false,
+});

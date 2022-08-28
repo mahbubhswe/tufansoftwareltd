@@ -13,19 +13,20 @@ export default function Home() {
     <>
       <TechnologyWeLove />
       <section id="our-services">
-      <OurServices />
+        <OurServices />
       </section>
       <ResponsiveDesign />
       <section id="software-categories">
-      <IndrustryWeServe />
+        <IndrustryWeServe />
       </section>
       <OurTechnologyExpert />
       <section id="about-us">
-      <AboutUs />
+        <AboutUs />
       </section>
       <WhyChoceUs />
 
       <MessengerCustomerChat
+        style={{ background: "#23CADA" }}
         pageId="101494675943667"
         appId="2102876166584313"
       />

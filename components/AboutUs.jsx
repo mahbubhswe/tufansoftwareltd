@@ -34,6 +34,7 @@ export default function AboutUs() {
           lg: "row",
           xl: "row",
         }}
+        pb={10}
       >
         <Box
           sx={{

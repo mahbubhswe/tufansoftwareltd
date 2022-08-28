@@ -49,7 +49,7 @@ export default function IndrustryWeServe() {
     {
       id: 4,
       img: cnp,
-      text: "Online News Paper System",
+      text: "Online News Paper",
       url: "/services/technology/artificial-intelligence",
     },
     {
@@ -85,7 +85,7 @@ export default function IndrustryWeServe() {
     {
       id: 10,
       img: chms2,
-      text: "Hotel Managment Syestem",
+      text: "Hotel Managment",
       url: "/services/technology/blockchain",
     },
     {
@@ -110,7 +110,7 @@ export default function IndrustryWeServe() {
     {
       id: 14,
       img: onDimand,
-      text: "On Dimand",
+      text: "On Demand",
       url: "/services/technology/blockchain",
     },
   ];
@@ -135,7 +135,7 @@ export default function IndrustryWeServe() {
                   key={x.id}
                   item
                   sx={{
-                    width: "250px",
+                    width: "230px",
                   }}
                   data-aos="fade-up-right"
                   data-aos-offset="-50"
@@ -151,7 +151,7 @@ export default function IndrustryWeServe() {
                       <Image
                         alt="services"
                         src={x.img}
-                        width={250}
+                        width={230}
                         height={200}
                         quality={100}
                       />

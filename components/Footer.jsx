@@ -7,6 +7,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import MailIcon from '@mui/icons-material/Mail';
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Box } from "@mui/system";
 import React from "react";
@@ -65,6 +66,16 @@ export default function Footer() {
               <ListItemText
                 primary="Mobile"
                 secondary="+8801799733805
+                  "
+              />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <MailIcon sx={{ color: "#21335C" }} />
+              </ListItemIcon>
+              <ListItemText
+                primary="E-mail"
+                secondary="tufansoftwareltd@gmail.com
                   "
               />
             </ListItem>
