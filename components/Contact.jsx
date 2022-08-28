@@ -1,162 +1,89 @@
-import React from "react";
 import {
   Button,
-  CircularProgress,
+  Container,
+  Paper,
   Stack,
   TextField,
-  Typography,
   Box,
+  Typography,
 } from "@mui/material";
-import axios from "axios";
-import { useState } from "react";
+import React, { useState } from "react";
+import NextImage from "next/image";
 import contact from "../public/img/contact.svg";
-import Image from "next/image";
-export default function Index() {
-  const [show, setShow] = useState(false);
-  const [name, setName] = useState();
+export default function Contact() {
   const [email, setEmail] = useState();
+  const [name, setName] = useState();
   const [phone, setPhone] = useState();
-  const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
-  const [res, setRes] = useState();
-  const submitHandler = async (e) => {
+  const submitHanler = (e) => {
     e.preventDefault();
     e.target.reset();
-    setShow(true);
-    const { data } = await axios.post("/api/contact", {
-      name,
-      email,
-      phone,
-      subject,
-      message,
-    });
-    setShow(false);
-    setRes(data);
+    alert("Ok");
+    try {
+    } catch (error) {
+      alert("Ok");
+    }
   };
   return (
-    <Stack
-      direction={{
-        xs: "column",
-        sm: "column",
-        md: "row",
-        lg: "row",
-        xl: "row",
-      }}
-    >
-      <Box spacing={5}
-        sx={{
-          display: "grid",
-          placeContent: "center",
-        }}
-      >
-        <Image
-          src={contact}
-          alt="contact"
-          width={250}
-          height={250}
-          quality={100}
-          data-aos="zoom-in"
-          data-aos-offset="-50"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center"
-        />
-      </Box>
-      <Box
-        sx={{
-          display: "grid",
-          placeContent: "center",
-        }}
-      >
-        <form onSubmit={submitHandler}>
-          <Stack
-            spacing={1}
-            sx={{
-              padding: "10px",
-              borderRadius: "7px",
-              boxShadow: "0 1px 4px 0 rgb(0 0 0 / 50%)",
-            }}
-          >
-            
+    <Container>
+      <Paper sx={{ padding: "30px" }} elevation={2}>
+        <Stack onSubmit={submitHanler} spacing={3} component="form">
+          <NextImage src={contact} alt="logo" width={120} height={120} />
+          <Typography align="center" variant="bold" component="h1">
+            Contact
+          </Typography>
+          <TextField
+            label="Full name"
+            type="text"
+            placeholder="Full name"
+            size="small"
+            required
+            color="secondary"
+            onChange={(e) => setName(e.target.value)}
+          ></TextField>
+          <TextField
+            label="Email address"
+            type="email"
+            placeholder="E-mail address"
+            size="small"
+            required
+            color="secondary"
+            onChange={(e) => setEmail(e.target.value)}
+          ></TextField>
+          <TextField
+            label="Phone"
+            type="tel"
+            placeholder="Phone"
+            size="small"
+            required
+            color="secondary"
+            onChange={(e) => setPhone(e.target.value)}
+          ></TextField>
+          <TextField
+            label="Message"
+            type="text"
+            placeholder="Message"
+            size="small"
+            required
+            color="secondary"
+            multiline
+            rows={4}
+            onChange={(e) => setMessage(e.target.value)}
+          ></TextField>
 
-            <Typography
-              component="p"
-              align="center"
-              sx={{ display: res ? "block" : "none", color: "white" }}
-            >
-              {res}
-            </Typography>
-            <TextField
-              type="text"
-              size="small"
-              label="Full Name"
-              variant="outlined"
-              id="Full Name"
-              required={true}
-              color="secondary"
-              placeholder="Full Name"
-              onChange={(e) => setName(e.target.value)}
-            />
-            <TextField
-              type="email"
-              size="small"
-              label="E-mail"
-              variant="outlined"
-              required={true}
-              color="secondary"
-              placeholder="E-mail Address"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <TextField
-              type="phone"
-              label="Phone"
-              variant="outlined"
-              size="small"
-              required={true}
-              multiline
-              maxRows={4}
-              color="secondary"
-              placeholder="Phone number"
-              onChange={(e) => setPhone(e.target.value)}
-            />
-            <TextField
-              type="text"
-              size="small"
-              label="Subject"
-              variant="outlined"
-              required={true}
-              color="secondary"
-              placeholder="Full Name"
-              onChange={(e) => setSubject(e.target.value)}
-            />
-            <TextField
-              type="text"
-              label="Type your message here"
-              variant="outlined"
-              required={true}
-              multiline
-              color="secondary"
-              placeholder="Type your message here"
-              rows={4}
-              onChange={(e) => setMessage(e.target.value)}
-            />
+          <Box style={{ textAlign: "center" }}>
             <Button
               type="submit"
-              sx={{
-                background: "green",
-                "&:hover": {
-                  background: "black",
-                },
-              }}
+              variant="contained"
+              color="secondary"
+              fullWidth
+              disableFocusRipple={true}
             >
-              {show ? <CircularProgress></CircularProgress> : "Send Mail"}
+              Send mail
             </Button>
-          </Stack>
-        </form>
-      </Box>
-    </Stack>
+          </Box>
+        </Stack>
+      </Paper>
+    </Container>
   );
 }

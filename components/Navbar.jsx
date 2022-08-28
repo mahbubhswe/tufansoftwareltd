@@ -18,7 +18,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import NextLink from "next/link";
 import afterHeadPic from "../public/img/afterHeadPic.webp";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import Contact from "../components/Contact";
 export default function Navbar() {
@@ -188,23 +187,19 @@ export default function Navbar() {
         scroll="body"
         open={showContact}
         maxWidth="sm"
+        fullScreen
         onClose={() => setShowContact(!showContact)}
       >
-        <DialogTitle align="center" fontSize={25}>
-          We will answer your mail within 24H
+        <DialogTitle align="center" fontSize={25} >
+     We will answer your mail within 24H
           <Button
             onClick={() => setShowContact(false)}
             type="button"
             sx={{
               width: "3px",
               marginLeft: "auto",
-              color: "black",
-              border: "1px dotted #ccc",
-              background: "red",
-              marginLeft: "5px",
-              "&:hover": {
-                background: "red",
-              },
+              color: "red",
+              marginLeft: "20px",
             }}
           >
             <CloseIcon></CloseIcon>
